@@ -1,5 +1,7 @@
 week1-tasks
 
+// Random password generator - Python intern
+
 import string
 import random
 
