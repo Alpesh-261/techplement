@@ -1,0 +1,24 @@
+import string
+import random
+
+def generate_password(length):
+    
+    if length < 8:
+        return "Password is too short and weak. A password is considered weak if it has less than 8 characters."
+    elif length > 16:
+        return "Password length must be between 8 and 16 characters."
+
+    all_characters = string.ascii_letters + string.digits + string.punctuation
+
+    password = ''.join(random.choices(all_characters, k=length))
+    return password
+
+def main():
+    length = int(input("Enter the length of the password (8-16): "))
+
+    password = generate_password(length)
+    print("Your password is:", password)
+
+if __name__ == "__main__":
+    main()
+
